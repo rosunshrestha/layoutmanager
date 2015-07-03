@@ -10,6 +10,5 @@
         $scope.previousStep=function(){
             $location.path('/');
         }
-        console.log($scope.user.selectedLayouts);
     }
 })();
