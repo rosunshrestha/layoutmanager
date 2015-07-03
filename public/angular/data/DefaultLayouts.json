@@ -8,7 +8,7 @@
       "colRight": false,
       "css": {
         "width": "62.625em",
-        "padding": 0,
+        "padding": "0",
         "background": "none"
       },
       "child": {
@@ -40,7 +40,7 @@
       "colRight": true,
       "css": {
         "width": "62.625em",
-        "padding": 0,
+        "padding": "0",
         "background": "none"
       },
       "child": {
@@ -82,7 +82,7 @@
       "colRight": false,
       "css": {
         "width": "62.625em",
-        "padding": 0,
+        "padding": "0",
         "background": "none"
       },
       "child": {
