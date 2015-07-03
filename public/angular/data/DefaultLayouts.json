@@ -16,7 +16,7 @@
           "className": "col-main",
           "css":{
             "width":"100%",
-            "padding":0,
+            "padding":"0",
             "background":"none"
           },
           "child": {
@@ -24,7 +24,7 @@
               "className": "main",
               "css": {
                 "width":"100%",
-                "padding":0,
+                "padding":"0",
                 "background":"none"
               }
             }
@@ -48,7 +48,7 @@
           "className": "col-main",
           "css":{
             "width":"75%",
-            "padding":0,
+            "padding":"0",
             "background":"none",
             "float":"left"
           },
@@ -57,7 +57,7 @@
               "className": "main",
               "css": {
                 "width":"100%",
-                "padding":0,
+                "padding":"0",
                 "background":"none"
               }
             }
@@ -67,7 +67,7 @@
           "className": "col-right",
           "css": {
             "width":"22%",
-            "padding":0,
+            "padding":"0",
             "float":"right",
             "background":"none"
           }
@@ -90,7 +90,7 @@
           "className": "col-left",
           "css": {
             "width":"22%",
-            "padding":0,
+            "padding":"0",
             "float":"left",
             "background":"none"
           }
@@ -99,7 +99,7 @@
           "className": "col-main",
           "css":{
             "width":"75%",
-            "padding":0,
+            "padding":"0",
             "background":"none",
             "float":"right"
           },
@@ -108,7 +108,7 @@
               "className": "main",
               "css": {
                 "width":"100%",
-                "padding":0,
+                "padding":"0",
                 "background":"none"
               }
             }
@@ -124,7 +124,7 @@
       "colRight": true,
       "css": {
         "width":"62.625em",
-        "padding":0,
+        "padding":"0",
         "background":"none"
       },
       "child": {
@@ -132,7 +132,7 @@
           "className": "col-main",
           "css":{
             "width":"75%",
-            "padding":0,
+            "padding":"0",
             "background":"none",
             "float":"left"
           },
@@ -141,7 +141,7 @@
               "className": "col-l-left",
               "css": {
                 "width":"34%",
-                "padding":0,
+                "padding":"0",
                 "float":"left",
                 "background":"none"
               }
@@ -150,7 +150,7 @@
               "className": "main",
               "css": {
                 "width":"73%",
-                "padding":0,
+                "padding":"0",
                 "background":"none"
               }
             }
@@ -160,7 +160,7 @@
           "className": "col-right",
           "css": {
             "width":"22%",
-            "padding":0,
+            "padding":"0",
             "float":"right",
             "background":"none"
           }
@@ -175,7 +175,7 @@
       "colRight": false,
       "css": {
         "width":"62.625em",
-        "padding":0,
+        "padding":"0",
         "background":"none"
       },
       "child": {
@@ -183,7 +183,7 @@
           "className": "col-left",
           "css": {
             "width":"22%",
-            "padding":0,
+            "padding":"0",
             "float":"left",
             "background":"none"
           }
@@ -192,7 +192,7 @@
           "className": "col-main",
           "css":{
             "width":"75%",
-            "padding":0,
+            "padding":"0",
             "background":"none",
             "float":"right"
           },
@@ -201,7 +201,7 @@
               "className": "main",
               "css": {
                 "width":"73%",
-                "padding":0,
+                "padding":"0",
                 "background":"none",
                 "float":"left"
               }
@@ -210,7 +210,7 @@
               "className": "col-r-right",
               "css": {
                 "width":"34%",
-                "padding":0,
+                "padding":"0",
                 "background":"none",
                 "float":"right"
               }
@@ -227,7 +227,7 @@
       "colRight": true,
       "css": {
         "width":"62.625em",
-        "padding":0,
+        "padding":"0",
         "background":"none"
       },
       "child": {
@@ -235,7 +235,7 @@
           "className": "col-main",
           "css":{
             "width":"75%",
-            "padding":0,
+            "padding":"0",
             "background":"none",
             "float":"left"
           },
@@ -244,7 +244,7 @@
               "className": "main",
               "css": {
                 "width":"73%",
-                "padding":0,
+                "padding":"0",
                 "background":"none",
                 "float":"left"
               }
@@ -253,7 +253,7 @@
               "className": "col-r-right",
               "css": {
                 "width":"34%",
-                "padding":0,
+                "padding":"0",
                 "background":"none",
                 "float":"right"
               }
@@ -264,7 +264,7 @@
           "className": "col-right",
           "css": {
             "width":"22%",
-            "padding":0,
+            "padding":"0",
             "float":"right",
             "background":"none"
           }
@@ -279,7 +279,7 @@
       "colRight": false,
       "css": {
         "width":"62.625em",
-        "padding":0,
+        "padding":"0",
         "background":"none"
       },
       "child": {
@@ -287,7 +287,7 @@
           "className": "col-left",
           "css": {
             "width":"22%",
-            "padding":0,
+            "padding":"0",
             "float":"left",
             "background":"none"
           }
@@ -296,7 +296,7 @@
           "className": "col-main",
           "css":{
             "width":"75%",
-            "padding":0,
+            "padding":"0",
             "background":"none",
             "float":"right"
           },
@@ -305,7 +305,7 @@
               "className": "col-l-left",
               "css": {
                 "width":"34%",
-                "padding":0,
+                "padding":"0",
                 "float":"left",
                 "background":"none"
               }
@@ -314,7 +314,7 @@
               "className": "main",
               "css": {
                 "width":"73%",
-                "padding":0,
+                "padding":"0",
                 "background":"none",
                 "float":"right"
               }
