@@ -201,3 +201,6 @@ input[type="text"]{
 .example-layout{
   margin-bottom: 30px;
 }
+.panel-title .accordion-toggle{
+    display: block;
+}
