@@ -13,16 +13,45 @@
                 <accordion-heading>
                 {{layout.className}}<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
               </accordion-heading>
-              <div class="example-layout">
-                <div data-set-layout="{{$index}}">
+              <div class="page">
+                <div class="page-left">
+                  <div class="example-layout">
+                    <div data-set-layout="{{$index}}">
+                    </div>
+                  </div>
+                  <div class="set-layout-wrapper">
+                    <span>Class Name</span>
+                    <form>
+                      <p><label>Width</label><input type="text" id="width" value="100%"></p>
+                      <p><label>Height</label><input type="text" id="width" value="100%"></p>
+                      <p><label>Padding</label><input type="text" id="width" value="100%"></p>
+                      <p><label>Margin</label><input type="text" id="width" value="100%"></p>
+                      <div class="btn-orange btn-small">
+                        <a title="Next" href="#">Set</a>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="page-right">
+                  <div class="editor">
+                    <p><span>.col1{</span></p>
+                    <p><span>width: 100%</span></p>
+                    <p><span>}</span></p>
+                  </div>
                 </div>
               </div>
             </accordion-group>
           </accordion>
-          <a href="javascript:void(0)" data-ng-click="previousStep()">Previous </a>
-                <a href="javascript:void(0)" data-ng-click="generateLayout()">
-                    Generate
-                </a>
+          <div class="bottom-wrapper">
+          <div class="bottom-wrapper-left flt-left btn-orange">
+              <a href="javascript:void(0)" data-ng-click="previousStep()">Previous </a>
+            </div>
+            <div class="bottom-wrapper-right flt-right btn-orange">
+              <a href="javascript:void(0)" data-ng-click="generateLayout()">
+                Generate
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
