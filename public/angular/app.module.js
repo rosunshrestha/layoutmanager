@@ -3,7 +3,7 @@
     /**
      * Set the angular module
      */
-    angular.module("LayoutManagement",["ngRoute","ngStorage","ui.bootstrap.tpls","ui.bootstrap.accordion","checklist-model"]);
+    angular.module("LayoutManagement",["ngRoute","ngStorage","ui.bootstrap.tpls","ui.bootstrap.accordion","checklist-model","ng-code-mirror"]);
 
     /**
      * Configure the angular application

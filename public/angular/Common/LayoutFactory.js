@@ -92,6 +92,37 @@
                 data:layoutInfo
             });
         };
+        /**
+         * Parse child
+         * @param info
+         * @param children
+         * @param iteration
+         * @returns {*}
+         */
+        LayoutServices.setDivCss = function (css, children) {
+            var info={
+                hasChild:false,
+                css:css
+            }
+            angular.forEach(children, function (v, k) {
+                this.css=LayoutServices.addChildCss(this.css, v);
+                if (v.hasOwnProperty("child")) {
+                    this.hasChild = true;
+                    LayoutServices.setDivCss(this.css, v.child);
+                }
+            }, info);
+            if (!info.hasChild) {
+                return info;
+            }
+        };
+        LayoutServices.addChildCss=function(css,child){
+            css+="."+child.className+"{\n";
+            angular.forEach(child.css,function(v,k){
+                css+="\t"+k+":"+v+";\n";
+            },css);
+            css+="}\n";
+            return css;
+        }
         return LayoutServices
     }
 
