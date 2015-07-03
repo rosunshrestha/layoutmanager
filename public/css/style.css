@@ -152,7 +152,6 @@ input[type="checkbox"]:checked + label {
 }
 
 .page .page-right {
-  border: 1px solid #dddddd;
   float: right;
   height: 400px;
   margin: 10px;
@@ -201,4 +200,7 @@ input[type="text"]{
 }
 .example-layout{
   margin-bottom: 30px;
+}
+.panel-title .accordion-toggle{
+    display: block;
 }

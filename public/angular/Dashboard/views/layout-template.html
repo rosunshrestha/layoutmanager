@@ -1,24 +1,56 @@
 
-<div class="layout-template-wrapper">
-    <div class="main-wrapper">
-        <div class="main-container" data-ng-class="selectedLayout.className">
-            <div class="col-left" data-ng-if="selectedLayout.colLeft">
-                left
-            </div>
-            <div class="col-main">
-                <div class="col-l-left" data-ng-if="selectedLayout.colLLeft">
-                    l-left
+<div class="page">
+    <div class="page-left">
+        <div class="example-layout">
+            <div class="layout-template-wrapper">
+                <div class="main-wrapper">
+                    <div class="main-container" data-ng-click="setLayoutCss(selectedKey,'main-container')"
+                                 data-ng-class="selectedLayout.className">
+                    <div class="col-left" data-ng-click="setLayoutCss(selectedKey,'col-left')"
+                         data-ng-if="selectedLayout.colLeft">
+                    </div>
+                    <div class="col-main" data-ng-click="setLayoutCss(selectedKey,'col-main')">
+                        <div class="col-l-left" data-ng-click="setLayoutCss(selectedKey,'col-l-left')"
+                             data-ng-if="selectedLayout.colLLeft">
+                        </div>
+                        <div class="main" data-ng-click="setLayoutCss(selectedKey,'main')">
+                        </div>
+                        <div class="col-r-right" data-ng-click="setLayoutCss(selectedKey,'col-r-right')"
+                             data-ng-if="selectedLayout.colRRight">
+                        </div>
+                    </div>
+                    <div class="col-right" data-ng-click="setLayoutCss(selectedKey,'col-right')" data-ng-if="selectedLayout.colRight">
+                    </div>
                 </div>
-                <div class="main">
-                    main
-                </div>
-                <div class="col-r-right" data-ng-if="selectedLayout.colRRight">
-                    r-right
                 </div>
             </div>
-            <div class="col-right" data-ng-if="selectedLayout.colRight">
-                right
-            </div>
+        </div>
+        <div class="set-layout-wrapper">
+            <span>{{selectedDiv}}</span>
+            <form>
+                <div class="form-element">
+                    <p><label for="{{selectedDiv}}-width">Width</label><input type="text" id="{{selectedDiv}}-width" data-ng-model="selectedDivCss.width"></p>
+                    <p><label for="{{selectedDiv}}-padding">Padding</label><input type="text" id="{{selectedDiv}}-padding" data-ng-model="selectedDivCss.padding"></p>
+                    <p><label for="{{selectedDiv}}-background">Background Color</label><input type="text" id="{{selectedDiv}}-background" data-ng-model="selectedDivCss.background"></p>
+
+                    <div class="btn-orange btn-small">
+                        <a title="Next" href="#">Set</a>
+                    </div>
+                </div>
+
+            </form>
+
+
+        </div>
+    </div>
+    <div class="page-right">
+        <div class="editor">
+            <pre>
+                {{selectedLayoutCss}}
+            </pre>
+
+
+
         </div>
     </div>
 </div>
