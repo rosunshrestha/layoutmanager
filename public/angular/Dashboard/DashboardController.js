@@ -1,5 +1,4 @@
-;
-(function () {
+;(function () {
     "use strict";
     angular.module("LayoutManagement").controller("DashboardController", DashboardController);
     DashboardController.$inject = ["$scope", "$location", "LayoutFactory", "DefaultLayoutFactory"];

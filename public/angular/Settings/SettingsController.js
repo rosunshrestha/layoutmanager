@@ -1,4 +1,4 @@
-(function () {
+;(function () {
     "use strict";
     angular.module("LayoutManagement").controller("SettingsController", SettingsController);
     SettingsController.$inject = ["$scope","$location", "LayoutFactory"];
