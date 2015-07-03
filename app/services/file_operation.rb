@@ -13,7 +13,6 @@ class FileOperation
   end
 
   def self.delete_existing_file
-    binding.pry
     if File.exist?(CommonConstants::HTML_PATH)
       destroy(CommonConstants::HTML_PATH)
     end
