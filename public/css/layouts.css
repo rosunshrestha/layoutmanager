@@ -27,23 +27,27 @@ div::after{
     height:auto !important;
     height:200px;
 }
+.col-main{
+    background: #431414;
+    padding:5px;
+}
 .main{
     background:#2E5C87;
-    min-height:200px;
+    min-height:190px;
     height:auto !important;
-    height:200px;
+    height:190px;
 }
 .col-l-left{
     background:#999177;
-    min-height:200px;
+    min-height:190px;
     height:auto !important;
-    height:200px;
+    height:190px;
 }
 .col-r-right{
     background:#254D1A;
-    min-height:200px;
+    min-height:190px;
     height:auto !important;
-    height:200px;
+    height:190px;
 }
 .col-right{
     background:#86A37F;
@@ -74,11 +78,11 @@ div::after{
     float:left;
 }
 .main-container.col-3-right-layout .col-main .main,.main-container.col-3-l-left-layout .col-main .main{
-    width:150px;
+    width:140px;
     float:right;
 }
 .main-container.col-3-left-layout .col-main .main,.main-container.col-3-r-right-layout .col-main .main{
-    width:150px;
+    width:140px;
     float:left;
 }
 .main-container.col-3-left-layout .col-main .col-r-right,.main-container.col-3-r-right-layout .col-main .col-r-right{
