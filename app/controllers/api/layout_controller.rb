@@ -1,16 +1,10 @@
 class Api::LayoutController < ApplicationController
 
-
-  #skip_before_filter :verify_authenticity_token
-  #protect_from_forgery :except => :generate
-
   # api for generating file in client side
-  #
   #
   # @url api/layout/generate
   # @method GET
   def generate
-    binding.pry
     root = Tree::Node.new('parent',{'height'=> '250px','width'=> '500px', 'background' => 'blue'},
                           [Tree::Node.new('first-child', {'height' => '240px', 'width' => '150px','background' => 'red', 'float' => 'left'}, nil),
                            Tree::Node.new('second-child', {'height' => '240px', 'width' => '150px','background' => 'green', 'float' => 'left'},

@@ -10,8 +10,6 @@ class FileOperation
 
   # Writes previous content to the html before adding layout
   #
-  #
-  #
   def self.generate_before_html
     File.write(CommonConstants::HTML_PATH, "<!DOCTYPE html>
 <html>
@@ -24,8 +22,6 @@ class FileOperation
   end
 
   # writes content to the html after adding layout
-  #
-  #
   #
   def self.generate_after_html
     File.write(CommonConstants::HTML_PATH, "</body>
