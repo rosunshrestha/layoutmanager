@@ -149,16 +149,14 @@ input[type="checkbox"]:checked + label {
 }
 
 .page .page-right {
-  border: 1px solid #ff6633;
-  border-radius: 5px;
+  border: 1px solid #dddddd;
   float: right;
   height: 400px;
   margin: 10px;
   width: 40%;
 }
 .set-layout-wrapper{
-  border: 1px solid #ff6633;
-  border-radius: 5px;
+  border: 1px solid #dddddd;
   padding: 20px;
 }
 .sample-layout-wrapper{
@@ -178,4 +176,20 @@ input[type="checkbox"]:checked + label {
 }
 p{
   margin: 10px;
+}
+.bottom-wrapper{
+width: 100%
+}
+.bottom-wrapper-left{
+width: 235px;
+}
+.bottom-wrapper-right{
+width: 200px;
+}
+.example-layout{
+  width: 63%;
+  margin: 0px auto;
+}
+.glyphicon{
+  top: -14px;
 }
