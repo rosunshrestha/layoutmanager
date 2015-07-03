@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   namespace :api do
       resources :layout, :except => [:new, :edit, :update, :show, :destroy] do
         collection do
-          get :generate
+          post :generate
+          get :download_link
         end
     end
   end
