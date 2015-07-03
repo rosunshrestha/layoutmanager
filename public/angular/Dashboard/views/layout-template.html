@@ -1,10 +1,9 @@
 
 <div class="page">
-    <div class="page-left">
-        <div class="example-layout">
-            <div class="layout-template-wrapper">
-                <div class="main-wrapper">
-                    <div class="main-container" css-change="main-container" data-ng-class="selectedLayout.className">
+    <div class="example-layout">
+        <div class="layout-template-wrapper">
+            <div class="main-wrapper">
+                <div class="main-container" css-change="main-container" data-ng-class="selectedLayout.className">
                     <div class="col-left" css-change="col-left" data-ng-if="selectedLayout.colLeft">
                     </div>
                     <div class="col-main" css-change="col-main">
@@ -18,9 +17,10 @@
                     <div class="col-right" css-change="col-right"  data-ng-if="selectedLayout.colRight">
                     </div>
                 </div>
-                </div>
             </div>
         </div>
+    </div>
+    <div class="page-left">
         <div class="set-layout-wrapper">
             <h3>{{selectedDiv}}</h3>
             <form>
@@ -30,7 +30,7 @@
                     <p><label for="{{selectedDiv}}-background">Background Color</label><input type="text" id="{{selectedDiv}}-background" data-ng-model="selectedDivCss.background"></p>
 
                     <div class="btn-orange btn-small">
-                        <a title="Next" href="javascript:void(0)">Set</a>
+                        <a title="Next" data-ng-click="setLayoutCss(selectedDiv)" href="javascript:void(0)">Set</a>
                     </div>
                 </div>
 

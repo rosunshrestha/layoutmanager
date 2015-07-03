@@ -9,6 +9,10 @@
     function LayoutFactory($localStorage,DefaultLayoutFactory,$http,CONSTANT) {
 
         var LayoutServices = {};
+        var userDefinedCss={};
+
+
+
 
         /**
          * Get count of object property
@@ -23,7 +27,6 @@
          * @param object layout
          */
         LayoutServices.addSelectedLayout=function(layout){
-            console.log(selectedLayouts);
             selectedLayouts.push(layout);
             $localStorage.user.selectedLayouts.push(layout);
         };
@@ -115,13 +118,28 @@
                 return info;
             }
         };
+        LayoutServices.generateCss=function(divName,cssObject){
+            var css="\n."+divName+"{\n";
+            angular.forEach(cssObject,function(v,k){
+                css+="\t"+k+":"+v+";\n";
+            },css);
+            css+="}\n";
+            return css;
+        };
         LayoutServices.addChildCss=function(css,child){
-            css+="."+child.className+"{\n";
+            css+="\n."+child.className+"{\n";
             angular.forEach(child.css,function(v,k){
                 css+="\t"+k+":"+v+";\n";
             },css);
             css+="}\n";
             return css;
+        }
+        LayoutServices.extendUserDefinedCss=function(css){
+            angular.extend(userDefinedCss,css);
+            $localStorage.user.css=userDefinedCss;
+        }
+        LayoutServices.getUserDefinedCss=function(){
+            return userDefinedCss;
         }
         return LayoutServices
     }
