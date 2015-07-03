@@ -11,16 +11,16 @@
         "padding": "0",
         "background": "none"
       },
-      "child": {
-        "0": {
+      "child": [
+        {
           "className": "col-main",
           "css":{
             "width":"100%",
             "padding":"0",
             "background":"none"
           },
-          "child": {
-            "0": {
+          "child": [
+            {
               "className": "main",
               "css": {
                 "width":"100%",
@@ -28,9 +28,9 @@
                 "background":"none"
               }
             }
-          }
+          ]
         }
-      }
+      ]
     },
     {
       "className": "col-2-right-layout",
@@ -43,8 +43,8 @@
         "padding": "0",
         "background": "none"
       },
-      "child": {
-        "0": {
+      "child": [
+        {
           "className": "col-main",
           "css":{
             "width":"75%",
@@ -52,8 +52,8 @@
             "background":"none",
             "float":"left"
           },
-          "child": {
-            "0": {
+          "child": [
+            {
               "className": "main",
               "css": {
                 "width":"100%",
@@ -61,9 +61,9 @@
                 "background":"none"
               }
             }
-          }
+          ]
         },
-        "1": {
+        {
           "className": "col-right",
           "css": {
             "width":"22%",
@@ -72,7 +72,7 @@
             "background":"none"
           }
         }
-      }
+      ]
     },
     {
       "className": "col-2-left-layout",
@@ -85,8 +85,8 @@
         "padding": "0",
         "background": "none"
       },
-      "child": {
-        "0": {
+      "child": [
+        {
           "className": "col-left",
           "css": {
             "width":"22%",
@@ -95,7 +95,7 @@
             "background":"none"
           }
         },
-        "1": {
+        {
           "className": "col-main",
           "css":{
             "width":"75%",
@@ -103,8 +103,8 @@
             "background":"none",
             "float":"right"
           },
-          "child": {
-            "0": {
+          "child": [
+            {
               "className": "main",
               "css": {
                 "width":"100%",
@@ -112,9 +112,9 @@
                 "background":"none"
               }
             }
-          }
+          ]
         }
-      }
+      ]
     },
     {
       "className": "col-3-right-layout",
@@ -127,8 +127,8 @@
         "padding":"0",
         "background":"none"
       },
-      "child": {
-        "0": {
+      "child": [
+        {
           "className": "col-main",
           "css":{
             "width":"75%",
@@ -136,8 +136,8 @@
             "background":"none",
             "float":"left"
           },
-          "child": {
-            "0": {
+          "child": [
+            {
               "className": "col-l-left",
               "css": {
                 "width":"34%",
@@ -146,7 +146,7 @@
                 "background":"none"
               }
             },
-            "1": {
+            {
               "className": "main",
               "css": {
                 "width":"73%",
@@ -154,9 +154,9 @@
                 "background":"none"
               }
             }
-          }
+          ]
         },
-        "1": {
+        {
           "className": "col-right",
           "css": {
             "width":"22%",
@@ -165,7 +165,7 @@
             "background":"none"
           }
         }
-      }
+      ]
     },
     {
       "className": "col-3-left-layout",
@@ -178,8 +178,8 @@
         "padding":"0",
         "background":"none"
       },
-      "child": {
-        "0": {
+      "child": [
+        {
           "className": "col-left",
           "css": {
             "width":"22%",
@@ -188,7 +188,7 @@
             "background":"none"
           }
         },
-        "1": {
+        {
           "className": "col-main",
           "css":{
             "width":"75%",
@@ -196,8 +196,8 @@
             "background":"none",
             "float":"right"
           },
-          "child": {
-            "0": {
+          "child": [
+            {
               "className": "main",
               "css": {
                 "width":"73%",
@@ -206,7 +206,7 @@
                 "float":"left"
               }
             },
-            "1": {
+           {
               "className": "col-r-right",
               "css": {
                 "width":"34%",
@@ -215,9 +215,9 @@
                 "float":"right"
               }
             }
-          }
+          ]
         }
-      }
+      ]
     },
     {
       "className": "col-3-r-right-layout",
@@ -230,8 +230,8 @@
         "padding":"0",
         "background":"none"
       },
-      "child": {
-        "0": {
+      "child": [
+        {
           "className": "col-main",
           "css":{
             "width":"75%",
@@ -239,8 +239,8 @@
             "background":"none",
             "float":"left"
           },
-          "child": {
-            "0": {
+          "child": [
+            {
               "className": "main",
               "css": {
                 "width":"73%",
@@ -249,7 +249,7 @@
                 "float":"left"
               }
             },
-            "1": {
+             {
               "className": "col-r-right",
               "css": {
                 "width":"34%",
@@ -258,9 +258,9 @@
                 "float":"right"
               }
             }
-          }
+          ]
         },
-        "1": {
+        {
           "className": "col-right",
           "css": {
             "width":"22%",
@@ -269,7 +269,7 @@
             "background":"none"
           }
         }
-      }
+      ]
     },
     {
       "className": "col-3-l-left-layout",
@@ -282,8 +282,8 @@
         "padding":"0",
         "background":"none"
       },
-      "child": {
-        "0": {
+      "child": [
+        {
           "className": "col-left",
           "css": {
             "width":"22%",
@@ -292,7 +292,7 @@
             "background":"none"
           }
         },
-        "1": {
+        {
           "className": "col-main",
           "css":{
             "width":"75%",
@@ -300,8 +300,8 @@
             "background":"none",
             "float":"right"
           },
-          "child": {
-            "0": {
+          "child": [
+            {
               "className": "col-l-left",
               "css": {
                 "width":"34%",
@@ -310,7 +310,7 @@
                 "background":"none"
               }
             },
-            "1": {
+            {
               "className": "main",
               "css": {
                 "width":"73%",
@@ -319,9 +319,9 @@
                 "float":"right"
               }
             }
-          }
+          ]
         }
-      }
+      ]
     }
   ]
 }
