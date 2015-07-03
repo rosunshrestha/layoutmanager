@@ -1,0 +1,34 @@
+
+<div class="layout-template-wrapper">
+    <div class="header-wrapper">
+        <div class="header">
+            header
+        </div>
+    </div>
+    <div class="main-wrapper">
+        <div class="main-container" data-ng-class="selectedLayout.className">
+            <div class="col-left" data-ng-if="selectedLayout.colLeft">
+                left
+            </div>
+            <div class="col-main">
+                <div class="col-l-left" data-ng-if="selectedLayout.colLLeft">
+                    l-left
+                </div>
+                <div class="main">
+                    main
+                </div>
+                <div class="col-r-right" data-ng-if="selectedLayout.colRRight">
+                    r-right
+                </div>
+            </div>
+            <div class="col-right" data-ng-if="selectedLayout.colRight">
+                right
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer">
+            footer
+        </div>
+    </div>
+</div>
