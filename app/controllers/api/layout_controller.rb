@@ -1,4 +1,8 @@
-class API::LayoutController < ApplicationController
+class Api::LayoutController < ApplicationController
+
+
+  #skip_before_filter :verify_authenticity_token
+  #protect_from_forgery :except => :generate
 
   # api for generating file in client side
   #

@@ -11,7 +11,7 @@ module Tree
     # @param [Hash] attributes which the css attributes for the Node
     # @param [Array] child which is the array of Node i.e child for the current Node
     #
-    def initialize name, attributes, childse
+    def initialize name, attributes, child
       @class_name = name
       @css_attributes = attributes
       @child_content = child
@@ -31,10 +31,9 @@ module Tree
     #
     #
     def traverse
-      html_content = "#{$current_tab}<div class='#{root.class_name}'>\n"
+      html_content = "#{$current_tab}<div class='#{class_name}'>\n"
       FileOperation.write(CommonConstants::HTML_PATH, html_content)
-      write_html_content(html_content)
-      css_content = ".#{root.class_name}{\n#{generate_css(root.css_attributes)}}\n\n"
+      css_content = ".#{class_name}{\n#{generate_css(css_attributes)}}\n\n"
       FileOperation.write(CommonConstants::CSS_PATH, css_content)
       if child_content
         $current_tab << "    "
@@ -57,6 +56,7 @@ module Tree
       css_attr.each do |key,value,index|
         attributes << "#{key}: #{value};\n"
       end
+      attributes
     end
   end
 end
