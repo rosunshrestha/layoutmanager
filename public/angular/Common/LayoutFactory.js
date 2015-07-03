@@ -4,9 +4,9 @@
     var selectedLayouts=[];
     var selectedKeys=[];
 
-    LayoutFactory.$inject=["$localStorage","DefaultLayoutFactory"];
+    LayoutFactory.$inject=["$localStorage","DefaultLayoutFactory","$http","CONSTANT"];
     angular.module("LayoutManagement").factory("LayoutFactory", LayoutFactory);
-    function LayoutFactory($localStorage,DefaultLayoutFactory) {
+    function LayoutFactory($localStorage,DefaultLayoutFactory,$http,CONSTANT) {
 
         var LayoutServices = {};
 
@@ -57,9 +57,14 @@
         LayoutServices.resetSelectedLayouts=function(selectedLayoutsList){
             selectedLayouts=selectedLayoutsList;
         };
+        /**
+         * Get specific selected layout
+         * @param key
+         * @returns {*}
+         */
         LayoutServices.getSpecificSelectedLayout=function(key){
             return selectedLayouts[key];
-        }
+        };
         /**
          * Set selected keys of the layouts selected by user
          * @param keys
@@ -74,6 +79,18 @@
          */
         LayoutServices.getSelectedKeys=function(){
             return selectedKeys;
+        };
+        /**
+         * Gets a link to the generated layout package
+         * @param layoutInfo
+         * @returns {*}
+         */
+        LayoutServices.generateLayout=function(layoutInfo){
+            return $http({
+                method:"POST",
+                url:CONSTANT.BASE_URL+'layout/generate',
+                data:layoutInfo
+            });
         };
         return LayoutServices
     }

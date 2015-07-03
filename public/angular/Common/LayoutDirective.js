@@ -12,7 +12,7 @@
         directive.link=function(scope,element,attrs,ngModel){
             var layoutKeyValue=attrs.setLayout;
             scope.selectedLayout=LayoutFactory.getSpecificSelectedLayout(layoutKeyValue);
-        }
+        };
         return directive;
     }
 })();
