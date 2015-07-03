@@ -20,15 +20,12 @@ module Tree
 
     # gives the total number of instances rceated
     #
-    #
     # @return [Fixnum] total number of object created fot the Node class
     def self.count
       @@count
     end
 
     # traverse the data in the node  post order
-    #
-    #
     #
     def traverse
       html_content = "#{$current_tab}<div class='#{class_name}'>\n"
@@ -47,7 +44,6 @@ module Tree
     end
 
     # provides all necessary css content in hash to be written in css file
-    #
     #
     # @param [Hash] css_attr all necessary css attributes with it's value
     # @return [String] returns the css for the current class in string format
