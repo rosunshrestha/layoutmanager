@@ -1,0 +1,213 @@
+;(function(){
+ "use strict";
+    angular.module("LayoutManagement").factory("DefaultLayoutFactory",DefaultLayoutFactory);
+    DefaultLayoutFactory.$inject=[];
+    /**
+     * Contains Services related to default layouts
+     * @returns {{}}
+     * @constructor
+     */
+    function DefaultLayoutFactory(){
+        var DefaultLayoutServices={};
+        /**
+         * Get all default Layouts
+         * @returns {*[]}
+         */
+        DefaultLayoutServices.getAllDefaultLayouts=function(){
+            return defaultLayouts;
+        };
+        /**
+         * Get specific default layout
+         * @param key
+         * @returns {*}
+         */
+        DefaultLayoutServices.getSpecificDefaultLayout=function(key){
+            return defaultLayouts[key];
+        };
+
+        return DefaultLayoutServices;
+    }
+
+    /**
+     * Default Layouts
+     * @type {*[]}
+     */
+    var defaultLayouts = [{
+        "className": "col-1-layout",
+        "colLeft": false,
+        "colLLeft": false,
+        "colRRight": false,
+        "colRight": false,
+        "child": {
+            0: {
+                "className": "col-main",
+                "child": {
+                    0: {
+                        "className": "main",
+                        "css": cssProperties
+                    }
+
+                }
+            }
+
+        }
+    }, {
+        "className": "col-2-right-layout",
+        "colLeft": false,
+        "colLLeft": false,
+        "colRRight": false,
+        "colRight": true,
+        "child": {
+            0: {
+                "className": "col-main",
+                "child": {
+                    0: {
+                        className: "main",
+                        css: cssProperties
+                    }
+                }
+            },
+            1: {
+                "className": "col-right",
+                css: cssProperties
+            }
+        }
+    }, {
+        "className": "col-2-left-layout",
+        "colLeft": true,
+        "colLLeft": false,
+        "colRRight": false,
+        "colRight": false,
+        "child": {
+            0: {
+                "className": "col-left",
+                "css": cssProperties
+            },
+            1: {
+                "className": "col-main",
+                "child": {
+                    0: {
+                        className: "main",
+                        css: cssProperties
+                    }
+                }
+            }
+        }
+    }, {
+        "className": "col-3-right-layout",
+        "colLeft": false,
+        "colLLeft": true,
+        "colRRight": false,
+        "colRight": true,
+        "child": {
+            0: {
+                "className": "col-main",
+                "child": {
+                    0: {
+                        className: "col-l-left",
+                        css: cssProperties
+                    },
+                    1: {
+                        className: "main",
+                        css: cssProperties
+                    }
+                }
+            },
+            1: {
+                "className": "col-right",
+                "css": cssProperties
+            }
+        }
+    }, {
+        "className": "col-3-left-layout",
+        "colLeft": true,
+        "colLLeft": false,
+        "colRRight": true,
+        "colRight": false,
+        "child": {
+            0: {
+                "className": "col-left",
+                "css": cssProperties
+            },
+            1: {
+                "className": "col-main",
+                "child": {
+                    0: {
+                        className: "main",
+                        css: cssProperties
+                    },
+                    1: {
+                        className: "col-r-right",
+                        css: cssProperties
+                    }
+                }
+            }
+
+        }
+    }, {
+        "className": "col-3-r-right-layout",
+        "colLeft": false,
+        "colLLeft": false,
+        "colRRight": true,
+        "colRight": true,
+        "child": {
+            0: {
+                "className": "col-main",
+                "child": {
+                    0: {
+                        className: "main",
+                        css: cssProperties
+                    },
+                    1: {
+                        className: "col-r-right",
+                        css: cssProperties
+                    }
+                }
+            },
+            1: {
+                "className": "col-right",
+                "css": cssProperties
+            }
+
+        }
+    }, {
+        "className": "col-3-l-left-layout",
+        "colLeft": true,
+        "colLLeft": true,
+        "colRRight": false,
+        "colRight": false,
+        "child": {
+            0: {
+                "className": "col-left",
+                "css": cssProperties
+            },
+            1: {
+                "className": "col-main",
+                "child": {
+                    0: {
+                        className: "col-l-left",
+                        css: cssProperties
+                    },
+                    1: {
+                        className: "main",
+                        css: cssProperties
+                    }
+
+                }
+            }
+        }
+    }
+    ];
+    /**
+     * Common Css Properties
+     * @type object
+     */
+    var cssProperties = {
+        "width": 0,
+        "padding-top": 0,
+        "padding-right": 0,
+        "padding-bottom": 0,
+        "padding-left": 0,
+        "background": "none"
+    }
+})();
