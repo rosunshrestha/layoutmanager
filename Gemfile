@@ -20,6 +20,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'figaro'
 # Providing multi-language support
 gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master'
+# for downloading file with zip
+gem 'rubyzip'
 
 group :development, :test do
   # Use pry debugger
