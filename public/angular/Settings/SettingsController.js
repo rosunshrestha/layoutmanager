@@ -18,7 +18,7 @@
         $scope.generateLayout = function () {
             LayoutFactory.generateLayout($scope.user.selectedLayouts)
                 .success(function (response) {
-                    console.log(response);
+                    window.location.href = 'http://localhost:3000/'+response.url;
                 }).error(function (error) {
                     console.log(error);
                 });

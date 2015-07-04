@@ -18,7 +18,7 @@ module Tree
       @@count = @@count + 1
     end
 
-    # gives the total number of instances rceated
+    # gives the total number of instances created
     #
     # @return [Fixnum] total number of object created fot the Node class
     def self.count
@@ -29,7 +29,7 @@ module Tree
     #
     def traverse
       html_content = "#{$current_tab}<div class='#{class_name}'>\n"
-      FileOperation.write(CommonConstants::HTML_PATH, html_content)
+      FileOperation.write(CommonConstants::HTML_PATH + $global_path + '.html', html_content)
       css_content = ".#{class_name}{\n#{generate_css(css_attributes)}}\n\n"
       FileOperation.write(CommonConstants::CSS_PATH, css_content)
       if child_content
@@ -40,7 +40,7 @@ module Tree
         $current_tab.chomp!("    ")
       end
       html_content = "#{$current_tab}</div>\n"
-      FileOperation.write(CommonConstants::HTML_PATH, html_content)
+      FileOperation.write(CommonConstants::HTML_PATH + $global_path + '.html', html_content)
     end
 
     # provides all necessary css content in hash to be written in css file
