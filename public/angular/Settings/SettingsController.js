@@ -2,8 +2,8 @@
 (function () {
     "use strict";
     angular.module("LayoutManagement").controller("SettingsController", SettingsController);
-    SettingsController.$inject = ["$scope", "$location", "LayoutFactory"];
-    function SettingsController($scope, $location, LayoutFactory) {
+    SettingsController.$inject = ["$scope", "$location", "LayoutFactory", "DefaultLayoutFactory", "CONSTANT"];
+    function SettingsController($scope, $location, LayoutFactory, DefaultLayoutFactory, CONSTANT) {
         $scope.user = {
             selectedLayouts: LayoutFactory.getSelectedLayouts()
         };
@@ -16,7 +16,6 @@
          * Generate Layout package
          */
         $scope.generateLayout = function () {
-            console.log('asdasd');
             LayoutFactory.generateLayout($scope.user.selectedLayouts)
                 .success(function (response) {
                     console.log(response);
@@ -24,5 +23,9 @@
                     console.log(error);
                 });
         }
+
+
+
+
     }
 })();

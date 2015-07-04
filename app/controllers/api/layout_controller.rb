@@ -5,6 +5,7 @@ class Api::LayoutController < ApplicationController
   # @url api/layout/generate
   # @method GET
   def generate
+    FileOperation.delete_existing_file
     root = Tree::Node.new('parent',{'height'=> '250px','width'=> '500px', 'background' => 'blue'},
                           [Tree::Node.new('first-child', {'height' => '240px', 'width' => '150px','background' => 'red', 'float' => 'left'}, nil),
                            Tree::Node.new('second-child', {'height' => '240px', 'width' => '150px','background' => 'green', 'float' => 'left'},
@@ -13,7 +14,8 @@ class Api::LayoutController < ApplicationController
     FileOperation.generate_before_html
     root.traverse
     FileOperation.generate_after_html
-    render json: true
+    ZipFileDownloader::download
+    send_file Rails.root.join('public', 'layout.zip'), :type=>"application/zip", :x_sendfile=>true
   end
 
 end

@@ -7,6 +7,9 @@
   content: "";
   display: block;
 }
+a, a:hover, a:active, a:focus{
+   outline: 0;
+}
 body{
   font:400 16px/1 'Roboto', sans-serif;
 }
@@ -149,7 +152,6 @@ input[type="checkbox"]:checked + label {
 }
 
 .page .page-right {
-  border: 1px solid #dddddd;
   float: right;
   height: 400px;
   margin: 10px;
@@ -190,6 +192,15 @@ width: 200px;
   width: 63%;
   margin: 0px auto;
 }
-.glyphicon{
-  top: -14px;
+.panel-title a span{
+  display: inline-block;
+}
+input[type="text"]{
+  padding: 10px;
+}
+.example-layout{
+  margin-bottom: 30px;
+}
+.panel-title .accordion-toggle{
+    display: block;
 }

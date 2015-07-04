@@ -1,19 +1,44 @@
-;(function(){
- "use strict";
-    angular.module("LayoutManagement").factory("DefaultLayoutFactory",DefaultLayoutFactory);
-    DefaultLayoutFactory.$inject=[];
+;
+(function () {
+    "use strict";
+    angular.module("LayoutManagement").factory("DefaultLayoutFactory", DefaultLayoutFactory);
+    DefaultLayoutFactory.$inject = ["$http"];
     /**
      * Contains Services related to default layouts
      * @returns {{}}
      * @constructor
      */
-    function DefaultLayoutFactory(){
-        var DefaultLayoutServices={};
+    function DefaultLayoutFactory($http) {
+        var DefaultLayoutServices = {};
+
+
+        /**
+         * Retrieve default layouts
+         */
+        DefaultLayoutServices.retrieveDefaultLayouts=function(){
+            $http.get("angular/data/DefaultLayouts.json").success(function(response){
+                defaultLayouts=response.layouts;
+            })
+        };
+        DefaultLayoutServices.retrieveDefaultLayouts();
+
+
+        /**
+         * Retrieve default css
+         */
+        DefaultLayoutServices.retrieveDefaultCss=function(){
+            $http.get("angular/data/DefaultCss.json").success(function(response){
+                defaultCss=response;
+                console.log(defaultCss);
+            })
+        };
+        DefaultLayoutServices.retrieveDefaultCss();
         /**
          * Get all default Layouts
          * @returns {*[]}
          */
-        DefaultLayoutServices.getAllDefaultLayouts=function(){
+        DefaultLayoutServices.getAllDefaultLayouts = function () {
+            console.log(defaultCss);
             return defaultLayouts;
         };
         /**
@@ -21,9 +46,12 @@
          * @param key
          * @returns {*}
          */
-        DefaultLayoutServices.getSpecificDefaultLayout=function(key){
+        DefaultLayoutServices.getSpecificDefaultLayout = function (key) {
             return defaultLayouts[key];
         };
+        DefaultLayoutServices.getSpecificDivDefaultCss=function(divName){
+            return defaultCss[divName];
+        }
 
         return DefaultLayoutServices;
     }
@@ -32,172 +60,8 @@
      * Default Layouts
      * @type {*[]}
      */
-    var defaultLayouts = [{
-        "className": "col-1-layout",
-        "colLeft": false,
-        "colLLeft": false,
-        "colRRight": false,
-        "colRight": false,
-        "child": {
-            0: {
-                "className": "col-main",
-                "child": {
-                    0: {
-                        "className": "main",
-                        "css": cssProperties
-                    }
-
-                }
-            }
-
-        }
-    }, {
-        "className": "col-2-right-layout",
-        "colLeft": false,
-        "colLLeft": false,
-        "colRRight": false,
-        "colRight": true,
-        "child": {
-            0: {
-                "className": "col-main",
-                "child": {
-                    0: {
-                        className: "main",
-                        css: cssProperties
-                    }
-                }
-            },
-            1: {
-                "className": "col-right",
-                css: cssProperties
-            }
-        }
-    }, {
-        "className": "col-2-left-layout",
-        "colLeft": true,
-        "colLLeft": false,
-        "colRRight": false,
-        "colRight": false,
-        "child": {
-            0: {
-                "className": "col-left",
-                "css": cssProperties
-            },
-            1: {
-                "className": "col-main",
-                "child": {
-                    0: {
-                        className: "main",
-                        css: cssProperties
-                    }
-                }
-            }
-        }
-    }, {
-        "className": "col-3-right-layout",
-        "colLeft": false,
-        "colLLeft": true,
-        "colRRight": false,
-        "colRight": true,
-        "child": {
-            0: {
-                "className": "col-main",
-                "child": {
-                    0: {
-                        className: "col-l-left",
-                        css: cssProperties
-                    },
-                    1: {
-                        className: "main",
-                        css: cssProperties
-                    }
-                }
-            },
-            1: {
-                "className": "col-right",
-                "css": cssProperties
-            }
-        }
-    }, {
-        "className": "col-3-left-layout",
-        "colLeft": true,
-        "colLLeft": false,
-        "colRRight": true,
-        "colRight": false,
-        "child": {
-            0: {
-                "className": "col-left",
-                "css": cssProperties
-            },
-            1: {
-                "className": "col-main",
-                "child": {
-                    0: {
-                        className: "main",
-                        css: cssProperties
-                    },
-                    1: {
-                        className: "col-r-right",
-                        css: cssProperties
-                    }
-                }
-            }
-
-        }
-    }, {
-        "className": "col-3-r-right-layout",
-        "colLeft": false,
-        "colLLeft": false,
-        "colRRight": true,
-        "colRight": true,
-        "child": {
-            0: {
-                "className": "col-main",
-                "child": {
-                    0: {
-                        className: "main",
-                        css: cssProperties
-                    },
-                    1: {
-                        className: "col-r-right",
-                        css: cssProperties
-                    }
-                }
-            },
-            1: {
-                "className": "col-right",
-                "css": cssProperties
-            }
-
-        }
-    }, {
-        "className": "col-3-l-left-layout",
-        "colLeft": true,
-        "colLLeft": true,
-        "colRRight": false,
-        "colRight": false,
-        "child": {
-            0: {
-                "className": "col-left",
-                "css": cssProperties
-            },
-            1: {
-                "className": "col-main",
-                "child": {
-                    0: {
-                        className: "col-l-left",
-                        css: cssProperties
-                    },
-                    1: {
-                        className: "main",
-                        css: cssProperties
-                    }
-
-                }
-            }
-        }
-    }
-    ];
+    var defaultLayouts;
+    var defaultCss;
     /**
      * Common Css Properties
      * @type object
