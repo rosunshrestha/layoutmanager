@@ -14,4 +14,12 @@ describe FileOperation do
       FileUtils.rm_rf(filePath)
     end
   end
+
+  describe '.destroy' do
+    filePath = File.new("#{Rails.root}/spec/fixtures/test.txt", 'w')
+    it 'should delete the file' do
+      FileOperation.destroy(filePath)
+      expect(File).not_to exist("#{Rails.root}/spec/fixtures/test.txt")
+    end
+  end
 end
