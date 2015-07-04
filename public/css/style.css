@@ -189,7 +189,7 @@ width: 235px;
 width: 200px;
 }
 .example-layout{
-  width: 63%;
+  width: 480px;
   margin: 0px auto;
 }
 .panel-title a span{
@@ -198,9 +198,7 @@ width: 200px;
 input[type="text"]{
   padding: 10px;
 }
-.example-layout{
-  margin-bottom: 30px;
-}
+
 .panel-title .accordion-toggle{
     display: block;
 }

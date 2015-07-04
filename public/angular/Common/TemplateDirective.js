@@ -9,7 +9,6 @@
             element.on('click',function(e){
                 e.stopPropagation();
                scope.getCss(selectedDiv);
-                console.log(scope.selectedDiv,scope.selectedDivCss);
             });
         }
         return directive;
