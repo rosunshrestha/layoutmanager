@@ -8,29 +8,29 @@
       "colRight": false,
       "css": {
         "width": "62.625em",
-        "padding": 0,
+        "padding": "0",
         "background": "none"
       },
-      "child": {
-        "0": {
+      "child": [
+        {
           "className": "col-main",
           "css":{
             "width":"100%",
-            "padding":0,
+            "padding":"0",
             "background":"none"
           },
-          "child": {
-            "0": {
+          "child": [
+            {
               "className": "main",
               "css": {
                 "width":"100%",
-                "padding":0,
+                "padding":"0",
                 "background":"none"
               }
             }
-          }
+          ]
         }
-      }
+      ]
     },
     {
       "className": "col-2-right-layout",
@@ -40,39 +40,39 @@
       "colRight": true,
       "css": {
         "width": "62.625em",
-        "padding": 0,
+        "padding": "0",
         "background": "none"
       },
-      "child": {
-        "0": {
+      "child": [
+        {
           "className": "col-main",
           "css":{
             "width":"75%",
-            "padding":0,
+            "padding":"0",
             "background":"none",
             "float":"left"
           },
-          "child": {
-            "0": {
+          "child": [
+            {
               "className": "main",
               "css": {
                 "width":"100%",
-                "padding":0,
+                "padding":"0",
                 "background":"none"
               }
             }
-          }
+          ]
         },
-        "1": {
+        {
           "className": "col-right",
           "css": {
             "width":"22%",
-            "padding":0,
+            "padding":"0",
             "float":"right",
             "background":"none"
           }
         }
-      }
+      ]
     },
     {
       "className": "col-2-left-layout",
@@ -82,39 +82,39 @@
       "colRight": false,
       "css": {
         "width": "62.625em",
-        "padding": 0,
+        "padding": "0",
         "background": "none"
       },
-      "child": {
-        "0": {
+      "child": [
+        {
           "className": "col-left",
           "css": {
             "width":"22%",
-            "padding":0,
+            "padding":"0",
             "float":"left",
             "background":"none"
           }
         },
-        "1": {
+        {
           "className": "col-main",
           "css":{
             "width":"75%",
-            "padding":0,
+            "padding":"0",
             "background":"none",
             "float":"right"
           },
-          "child": {
-            "0": {
+          "child": [
+            {
               "className": "main",
               "css": {
                 "width":"100%",
-                "padding":0,
+                "padding":"0",
                 "background":"none"
               }
             }
-          }
+          ]
         }
-      }
+      ]
     },
     {
       "className": "col-3-right-layout",
@@ -124,48 +124,48 @@
       "colRight": true,
       "css": {
         "width":"62.625em",
-        "padding":0,
+        "padding":"0",
         "background":"none"
       },
-      "child": {
-        "0": {
+      "child": [
+        {
           "className": "col-main",
           "css":{
             "width":"75%",
-            "padding":0,
+            "padding":"0",
             "background":"none",
             "float":"left"
           },
-          "child": {
-            "0": {
+          "child": [
+            {
               "className": "col-l-left",
               "css": {
                 "width":"34%",
-                "padding":0,
+                "padding":"0",
                 "float":"left",
                 "background":"none"
               }
             },
-            "1": {
+            {
               "className": "main",
               "css": {
                 "width":"73%",
-                "padding":0,
+                "padding":"0",
                 "background":"none"
               }
             }
-          }
+          ]
         },
-        "1": {
+        {
           "className": "col-right",
           "css": {
             "width":"22%",
-            "padding":0,
+            "padding":"0",
             "float":"right",
             "background":"none"
           }
         }
-      }
+      ]
     },
     {
       "className": "col-3-left-layout",
@@ -175,49 +175,49 @@
       "colRight": false,
       "css": {
         "width":"62.625em",
-        "padding":0,
+        "padding":"0",
         "background":"none"
       },
-      "child": {
-        "0": {
+      "child": [
+        {
           "className": "col-left",
           "css": {
             "width":"22%",
-            "padding":0,
+            "padding":"0",
             "float":"left",
             "background":"none"
           }
         },
-        "1": {
+        {
           "className": "col-main",
           "css":{
             "width":"75%",
-            "padding":0,
+            "padding":"0",
             "background":"none",
             "float":"right"
           },
-          "child": {
-            "0": {
+          "child": [
+            {
               "className": "main",
               "css": {
                 "width":"73%",
-                "padding":0,
+                "padding":"0",
                 "background":"none",
                 "float":"left"
               }
             },
-            "1": {
+           {
               "className": "col-r-right",
               "css": {
                 "width":"34%",
-                "padding":0,
+                "padding":"0",
                 "background":"none",
                 "float":"right"
               }
             }
-          }
+          ]
         }
-      }
+      ]
     },
     {
       "className": "col-3-r-right-layout",
@@ -227,49 +227,49 @@
       "colRight": true,
       "css": {
         "width":"62.625em",
-        "padding":0,
+        "padding":"0",
         "background":"none"
       },
-      "child": {
-        "0": {
+      "child": [
+        {
           "className": "col-main",
           "css":{
             "width":"75%",
-            "padding":0,
+            "padding":"0",
             "background":"none",
             "float":"left"
           },
-          "child": {
-            "0": {
+          "child": [
+            {
               "className": "main",
               "css": {
                 "width":"73%",
-                "padding":0,
+                "padding":"0",
                 "background":"none",
                 "float":"left"
               }
             },
-            "1": {
+             {
               "className": "col-r-right",
               "css": {
                 "width":"34%",
-                "padding":0,
+                "padding":"0",
                 "background":"none",
                 "float":"right"
               }
             }
-          }
+          ]
         },
-        "1": {
+        {
           "className": "col-right",
           "css": {
             "width":"22%",
-            "padding":0,
+            "padding":"0",
             "float":"right",
             "background":"none"
           }
         }
-      }
+      ]
     },
     {
       "className": "col-3-l-left-layout",
@@ -279,49 +279,49 @@
       "colRight": false,
       "css": {
         "width":"62.625em",
-        "padding":0,
+        "padding":"0",
         "background":"none"
       },
-      "child": {
-        "0": {
+      "child": [
+        {
           "className": "col-left",
           "css": {
             "width":"22%",
-            "padding":0,
+            "padding":"0",
             "float":"left",
             "background":"none"
           }
         },
-        "1": {
+        {
           "className": "col-main",
           "css":{
             "width":"75%",
-            "padding":0,
+            "padding":"0",
             "background":"none",
             "float":"right"
           },
-          "child": {
-            "0": {
+          "child": [
+            {
               "className": "col-l-left",
               "css": {
                 "width":"34%",
-                "padding":0,
+                "padding":"0",
                 "float":"left",
                 "background":"none"
               }
             },
-            "1": {
+            {
               "className": "main",
               "css": {
                 "width":"73%",
-                "padding":0,
+                "padding":"0",
                 "background":"none",
                 "float":"right"
               }
             }
-          }
+          ]
         }
-      }
+      ]
     }
   ]
 }
