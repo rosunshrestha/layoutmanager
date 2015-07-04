@@ -14,7 +14,7 @@ div::after{
 }
 
 .main-container{
-    width:380px;
+    width:480px;
     padding:10px;
     background:#B3A81A;
 }
@@ -57,35 +57,35 @@ div::after{
 }
 
 .main-container.col-2-left-layout .col-left,.main-container.col-3-left-layout .col-left,.main-container.col-3-l-left-layout .col-left{
-    width:90px;
+    width:115px;
     float:left;
 }
 .main-container.col-2-left-layout .col-main,.main-container.col-3-left-layout .col-main,.main-container.col-3-l-left-layout .col-main{
-    width:250px;
+    width:320px;
     float:right;
 }
 
 .main-container.col-2-right-layout .col-right,.main-container.col-3-right-layout .col-right,.main-container.col-3-r-right-layout .col-right{
-    width:90px;
+    width:115px;
     float:right;
 }
 .main-container.col-2-right-layout .col-main,.main-container.col-3-right-layout .col-main,.main-container.col-3-r-right-layout .col-main{
-    width:250px;
+    width:320px;
     float:left;
 }
 .main-container.col-3-right-layout .col-main .col-l-left,.main-container.col-3-l-left-layout .col-main .col-l-left{
-    width: 90px;
+    width: 115px;
     float:left;
 }
 .main-container.col-3-right-layout .col-main .main,.main-container.col-3-l-left-layout .col-main .main{
-    width:140px;
+    width:180px;
     float:right;
 }
 .main-container.col-3-left-layout .col-main .main,.main-container.col-3-r-right-layout .col-main .main{
-    width:140px;
+    width:180px;
     float:left;
 }
 .main-container.col-3-left-layout .col-main .col-r-right,.main-container.col-3-r-right-layout .col-main .col-r-right{
-    width: 90px;
+    width: 115px;
     float:right;
 }
