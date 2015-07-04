@@ -2,7 +2,6 @@ class Api::LayoutController < ApplicationController
 
   skip_before_filter :verify_authenticity_token
 
-
   $root = nil
   $global_path = ''
   $css_info = nil
@@ -19,10 +18,19 @@ class Api::LayoutController < ApplicationController
       $global_path = params[:layout_info][layout][:className]
       generate_layouts_in_files params[:css_info]
     end
-    render json: {url: download_link_api_layout_index_path}
+    render json: { url: download_api_layout_index_path }
   end
 
-  def generate_layouts_in_files css_info
+
+  def download
+    ZipFileDownloader::download
+    send_file Rails.root.join('public', 'layout.zip'), type: "application/zip", x_sendfile: true
+  end
+
+  private
+
+  def generate_layouts_in_files
+    FileOperation.delete_existing_file
     FileOperation.generate_necessary_files
     FileOperation.generate_before_html
     $root.traverse
@@ -44,17 +52,12 @@ class Api::LayoutController < ApplicationController
 
   def generate_layout layout
     unless layout[:child].nil?
-      root = Tree::Node.new(layout[:className], layout[:css], get_child_tree(layout[:child]))
+      $root = Tree::Node.new(layout[:className], layout[:css], get_child_tree(layout[:child]))
     else
-      root = Tree::Node.new(layout[:className], layout[:css], nil)
+      $root = Tree::Node.new(layout[:className], layout[:css], nil)
     end
-    $root = root
   end
 
-  def download_link
-    ZipFileDownloader::download
-    send_file Rails.root.join('public', 'layout.zip'), :type => "application/zip", :x_sendfile => true
-  end
 
   private
 

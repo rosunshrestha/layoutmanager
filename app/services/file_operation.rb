@@ -1,6 +1,6 @@
 class FileOperation
-
   require 'fileutils'
+
   # Writes the content to the file
   #
   # @param [String] path which is the path for the file
@@ -31,8 +31,6 @@ class FileOperation
       destroy(CommonConstants::OUTPUT_PATH)
     end
   end
-
-
 
   # Writes previous content to the html before adding layout
   #
