@@ -19,8 +19,6 @@ class Api::LayoutController < ApplicationController
     render json: { url: download_api_layout_index_path }
   end
 
-
-
   def download
     ZipFileDownloader::download
     send_file Rails.root.join('public', 'layout.zip'), type: "application/zip", x_sendfile: true
