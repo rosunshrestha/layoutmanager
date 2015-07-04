@@ -1,21 +1,56 @@
 class Api::LayoutController < ApplicationController
 
+  skip_before_filter :verify_authenticity_token
+
+
+  $root = nil
+  $global_path = ''
+
   # api for generating file in client side
   #
   # @url api/layout/generate
-  # @method GET
+  # @method POST
   def generate
+    layouts = params[:_json]
+    layouts.count.times do |layout|
+      generate_layout(layouts[layout])
+      $global_path = params[:_json][layout][:className]
+      generate_layouts_in_files
+    end
+    render json: {url: download_link_api_layout_index_path}
+  end
+
+  def generate_layouts_in_files
     FileOperation.delete_existing_file
-    root = Tree::Node.new('parent',{'height'=> '250px','width'=> '500px', 'background' => 'blue'},
-                          [Tree::Node.new('first-child', {'height' => '240px', 'width' => '150px','background' => 'red', 'float' => 'left'}, nil),
-                           Tree::Node.new('second-child', {'height' => '240px', 'width' => '150px','background' => 'green', 'float' => 'left'},
-                                          [Tree::Node.new('second-grand-child',{'height' => '125px','width' => '50px','background' => 'black', 'float' => 'left'},nil)]),
-                           Tree::Node.new('third-child', {'height' => '240px','width' => '50px','background' => 'yellow', 'float' => 'left'}, nil)])
+    FileOperation.generate_necessary_files
     FileOperation.generate_before_html
-    root.traverse
+    $root.traverse
     FileOperation.generate_after_html
+  end
+
+  def get_child_tree children
+    array = []
+    if children.nil?
+      return nil
+    end
+    children.each do |child|
+      array.push(Tree::Node.new(child[:className], child[:css], get_child_tree(child[:child])))
+    end
+    array
+  end
+
+  def generate_layout layout
+    unless layout[:child].nil?
+      root = Tree::Node.new(layout[:className], layout[:css], get_child_tree(layout[:child]))
+    else
+      root = Tree::Node.new(layout[:className], layout[:css], nil)
+    end
+    $root = root
+  end
+
+  def download_link
     ZipFileDownloader::download
-    send_file Rails.root.join('public', 'layout.zip'), :type=>"application/zip", :x_sendfile=>true
+    send_file Rails.root.join('public', 'layout.zip'), :type => "application/zip", :x_sendfile => true
   end
 
 end
