@@ -8,6 +8,24 @@ class FileOperation
     File.write(path, content, mode:'a')
   end
 
+  def self.destroy path
+    FileUtils.rm(path)
+  end
+
+  def self.delete_existing_file
+    if File.exist?(CommonConstants::HTML_PATH)
+      destroy(CommonConstants::HTML_PATH)
+    end
+    if File.exist?(CommonConstants::CSS_PATH)
+      destroy(CommonConstants::CSS_PATH)
+    end
+    if File.exist?(CommonConstants::OUTPUT_PATH)
+      destroy(CommonConstants::OUTPUT_PATH)
+    end
+  end
+
+
+
   # Writes previous content to the html before adding layout
   #
   def self.generate_before_html
