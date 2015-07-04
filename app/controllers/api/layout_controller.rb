@@ -10,7 +10,6 @@ class Api::LayoutController < ApplicationController
   # @url api/layout/generate
   # @method POST
   def generate
-    binding.pry
     layouts = params[:_json]
     layouts.count.times do |layout|
       generate_layout(layouts[layout])
