@@ -30,8 +30,6 @@ module Tree
     def traverse
       html_content = "#{$current_tab}<div class='#{class_name}'>\n"
       FileOperation.write(CommonConstants::HTML_PATH + $global_path + '.html', html_content)
-      css_content = ".#{class_name}{\n#{generate_css(css_attributes)}}\n\n"
-      FileOperation.write(CommonConstants::CSS_PATH, css_content)
       if child_content
         $current_tab << "    "
         child_content.each do |child|
@@ -42,17 +40,5 @@ module Tree
       html_content = "#{$current_tab}</div>\n"
       FileOperation.write(CommonConstants::HTML_PATH + $global_path + '.html', html_content)
     end
-
-    # provides all necessary css content in hash to be written in css file
-    #
-    # @param [Hash] css_attr all necessary css attributes with it's value
-    # @return [String] returns the css for the current class in string format
-    def generate_css css_attr
-      attributes = ""
-      css_attr.each do |key,value,index|
-        attributes << "#{key}: #{value};\n"
-      end
-      attributes
-    end
-  end
+ end
 end
