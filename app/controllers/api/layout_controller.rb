@@ -50,10 +50,9 @@ class Api::LayoutController < ApplicationController
 
   def generate_layout layout
     unless layout[:child].nil?
-      root = Tree::Node.new(layout[:className], layout[:css], get_child_tree(layout[:child]))
+      $root = Tree::Node.new(layout[:className], layout[:css], get_child_tree(layout[:child]))
     else
-      root = Tree::Node.new(layout[:className], layout[:css], nil)
+      $root = Tree::Node.new(layout[:className], layout[:css], nil)
     end
-    $root = root
   end
 end
