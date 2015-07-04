@@ -30,7 +30,6 @@ class Api::LayoutController < ApplicationController
   private
 
   def generate_layouts_in_files css_info
-    FileOperation.delete_existing_file
     FileOperation.generate_necessary_files
     FileOperation.generate_before_html
     $root.traverse
