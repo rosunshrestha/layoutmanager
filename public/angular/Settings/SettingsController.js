@@ -2,14 +2,17 @@
 (function () {
     "use strict";
     angular.module("LayoutManagement").controller("SettingsController", SettingsController);
-    SettingsController.$inject = ["$scope", "$location", "LayoutFactory", "DefaultLayoutFactory", "CONSTANT","$localStorage"];
-    function SettingsController($scope, $location, LayoutFactory, DefaultLayoutFactory, CONSTANT,$localStorage) {
+    SettingsController.$inject = ["$scope", "$location", "LayoutFactory","$localStorage"];
+    function SettingsController($scope, $location, LayoutFactory, $localStorage) {
         LayoutFactory.extendUserDefinedCss($localStorage.user.css);
         $scope.user = {
             selectedLayouts: LayoutFactory.getSelectedLayouts(),
             definedCss:LayoutFactory.getUserDefinedCss()
         };
         angular.extend($scope.user.selectedLayouts[0], {isOpen: true});
+        /**
+         * Go to previous step
+         */
         $scope.previousStep = function () {
             $location.path('/');
         }
@@ -24,9 +27,9 @@
             }
             LayoutFactory.generateLayout(data)
                 .success(function (response) {
-                    console.log(response);
+
                 }).error(function (error) {
-                    console.log(error);
+
                 });
         }
 
