@@ -24,3 +24,13 @@
 ## Future enhancement
   * integrate different html tags in the layout itself by drag and drop
   * to make user able to enter different css attributes for the layouts
+
+## Wireframe
+   * Select different layout which are required
+    ![alt tag](https://github.com/rosunshrestha/layoutmanager/dev/public/images/select-layout.png)
+
+   * Set attributes for different layouts div element
+    ![alt tag](https://github.com/rosunshrestha/layoutmanager/dev/public/images/set-attributes.png)
+
+   * Generate complete layout package you want in one click
+    ![alt tag](https://github.com/rosunshrestha/layoutmanager/dev/public/images/complete-package.png)
