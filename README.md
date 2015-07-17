@@ -27,10 +27,10 @@
 
 ## Wireframe
    * Select different layout which are required
-    ![alt tag](https://github.com/rosunshrestha/layoutmanager/dev/public/images/select-layout.png)
+    ![alt tag](https://github.com/rosunshrestha/layoutmanager/blob/master/public/images/select-layout.png)
 
    * Set attributes for different layouts div element
-    ![alt tag](https://github.com/rosunshrestha/layoutmanager/dev/public/images/set-attributes.png)
+    ![alt tag](https://github.com/rosunshrestha/layoutmanager/blob/master/public/images/set-attributes.png)
 
    * Generate complete layout package you want in one click
-    ![alt tag](https://github.com/rosunshrestha/layoutmanager/dev/public/images/complete-package.png)
+    ![alt tag](https://github.com/rosunshrestha/layoutmanager/blob/master/public/images/complete-package.png)
