@@ -8,7 +8,7 @@
   * Automatic html and css generation for the selected layout
 
 ## Architecture of the system
-  ![alt tag](https://github.com/rosunshrestha/layoutmanager/blobl/master/public/images/architecture.png)
+  ![alt tag](https://github.com/rosunshrestha/layoutmanager/blob/master/public/images/architecture.png)
 
 ## Technology used
   * **HTML/CSS**
