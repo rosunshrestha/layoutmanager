@@ -1,28 +1,26 @@
-== README
+# Layout Manager
+  It is a tool that generate different types of standard layouts as according to needs of developer. It is based on dynamic layout concept and standard floating principal.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Features
+  * User can select multiple layouts for generation.
+  * Based on the layout, user can provide custom css attributes for the respective by just clicking on it.
+  * Realtime reflection after changing the css property.
+  * Automatic html and css generation for the selected layout
 
-Things you may want to cover:
+## Architecture of the system
+  ![alt tag](https://github.com/rosunshrestha/layoutmanager/dev/public/images/architecture.png)
 
-* Ruby version
+## Technology used
+  * **HTML/CSS**
+  * **Angular JS**
+  * **Ruby On Rails**
+  * **rspec for Test Driven Development**
 
-* System dependencies
+## Impact of Layout Manager
+  * saves times for both developers and designer
+  * independency for developers
+  * Quick and efficient and also follows standard layouts
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## Future enhancement
+  * integrate different html tags in the layout itself by drag and drop
+  * to make user able to enter different css attributes for the layouts

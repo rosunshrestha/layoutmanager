@@ -12,29 +12,30 @@
         $scope.selectedLayoutCss += "}\n";
 
 
-        $scope.setDivCss = function (children) {
-            angular.forEach(children, function (v, k) {
-                $scope.selectedLayoutCss = LayoutFactory.addChildCss($scope.selectedLayoutCss, v);
-                if (v.hasOwnProperty("child")) {
-                    $scope.setDivCss(v.child);
-                }
-            });
-
-        };
-        $scope.setDivCss($scope.selectedLayout.child);
         $scope.selectedDiv = CONSTANT.MAIN_CONTAINER;
         $scope.selectedDivCss = DefaultLayoutFactory.getSpecificDivDefaultCss($scope.selectedDiv);
+
+        /**
+         * Get css for a specific div on click
+         * @param divName
+         */
         $scope.getCss = function (divName) {
             $scope.selectedDiv = divName;
             $scope.selectedDivCss = DefaultLayoutFactory.getSpecificDivDefaultCss($scope.selectedDiv);
             $scope.$apply();
         };
+
+        /**
+         * Set css for specific div
+         * @param divName
+         */
         $scope.setLayoutCss = function (divName) {
             var extendedCss=extendCss(divName,$scope.selectedDivCss,$scope.selectedLayout.className);
             var css = {};
             css[divName] = extendedCss;
             LayoutFactory.extendUserDefinedCss(css);
         };
+
         $scope.$watch('selectedDivCss.width', function (newValue, oldValue) {
             generateCss();
         });
@@ -44,12 +45,24 @@
         $scope.$watch('selectedDivCss.background', function (newValue, oldValue) {
             generateCss();
         });
+
+
+        /**
+         * Generate css once the css attributes are changed
+         */
         var generateCss = function () {
             var css = "";
             $scope.selectedLayoutCss = LayoutFactory.generateCss($scope.selectedDiv, $scope.selectedDivCss);
         };
 
 
+        /**
+         * Extends the css with floating information
+         * @param divName
+         * @param css
+         * @param layoutName
+         * @returns {*}
+         */
         var extendCss=function(divName,css,layoutName){
             var colMainFloatRight = ["col-2-left-layout", "col-3-left-layout", "col-3-l-left-layout"];
             var colMainFloatLeft = ["col-2-right-layout", "col-3-right-layout", "col-3-r-right-layout"];

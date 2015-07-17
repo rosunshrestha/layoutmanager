@@ -11,9 +11,6 @@
         var LayoutServices = {};
         var userDefinedCss={};
 
-
-
-
         /**
          * Get count of object property
          * @param objectToBeCounted
@@ -96,7 +93,7 @@
             });
         };
         /**
-         * Parse child
+         * Parse and generate complete css for a layout
          * @param info
          * @param children
          * @param iteration
@@ -118,6 +115,12 @@
                 return info;
             }
         };
+        /**
+         * Generate css for a div
+         * @param divName
+         * @param cssObject
+         * @returns {string}
+         */
         LayoutServices.generateCss=function(divName,cssObject){
             var css="\n."+divName+"{\n";
             angular.forEach(cssObject,function(v,k){
@@ -126,6 +129,12 @@
             css+="}\n";
             return css;
         };
+        /**
+         * Append css to the layout css
+         * @param css
+         * @param child
+         * @returns {*}
+         */
         LayoutServices.addChildCss=function(css,child){
             css+="\n."+child.className+"{\n";
             angular.forEach(child.css,function(v,k){
@@ -134,10 +143,18 @@
             css+="}\n";
             return css;
         }
+        /**
+         * Extends user defined css
+         * @param css
+         */
         LayoutServices.extendUserDefinedCss=function(css){
             angular.extend(userDefinedCss,css);
             $localStorage.user.css=userDefinedCss;
         }
+        /**
+         * Get user defined css for specific div
+         * @returns {{}}
+         */
         LayoutServices.getUserDefinedCss=function(){
             return userDefinedCss;
         }
