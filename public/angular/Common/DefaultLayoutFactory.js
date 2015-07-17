@@ -54,6 +54,7 @@
             })
         };
         DefaultLayoutServices.retrieveDefaultCss();
+
         /**
          * Get all default Layouts
          * @returns {*[]}
@@ -69,12 +70,22 @@
         DefaultLayoutServices.getSpecificDefaultLayout = function (key) {
             return defaultLayouts[key];
         };
+        /**
+         * Get specific div's default css
+         * @param divName
+         * @returns {*}
+         */
         DefaultLayoutServices.getSpecificDivDefaultCss=function(divName){
             return defaultCss[divName];
-        }
+        };
+
+        /**
+         * Get all the default css
+         * @returns {*}
+         */
         DefaultLayoutServices.getAllDefaultCss=function(){
             return defaultCss;
-        }
+        };
 
         return DefaultLayoutServices;
     }

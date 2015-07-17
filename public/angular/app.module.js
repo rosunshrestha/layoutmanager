@@ -28,9 +28,9 @@
      * Run the angular application
      */
     angular.module("LayoutManagement").run(run);
-    run.$inject = ["$rootScope", "$location", "$localStorage", "LayoutFactory", "DefaultLayoutFactory","CONSTANT"];
-    function run($rootScope, $location, $localStorage, LayoutFactory,DefaultLayoutFactory, CONSTANT) {
-        //delete $localStorage.user;
+    run.$inject = ["$localStorage", "LayoutFactory","CONSTANT"];
+    function run($localStorage, LayoutFactory,CONSTANT) {
+
         if (typeof $localStorage.user !== CONSTANT.UNDEFINED) {
             LayoutFactory.resetSelectedLayouts($localStorage.user.selectedLayouts);
             LayoutFactory.setSelectedKeys($localStorage.user.selectedKeys);
